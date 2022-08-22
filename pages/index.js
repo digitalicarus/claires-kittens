@@ -6,8 +6,8 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
-
       <main>
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
