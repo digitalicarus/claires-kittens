@@ -6,6 +6,9 @@ public_folder: img
 collections:
   - name: "pages"
     label: "Pages"
+    create: true
+    fields: 
+      - { label: "Body", name: "body", widget: "markdown"}
     files:
     - label: "Home"
       name: "home"
