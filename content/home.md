@@ -1,6 +1,9 @@
 ---
 date: 2022-08-22T04:25:10.777Z
-title: test
+title: Claire's Kittens
+heading: Claire's Kittens
+mom-cat-name: Claire
+mom-cat-description: Claire is cool
 ---
 test
 
