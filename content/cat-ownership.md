@@ -46,7 +46,7 @@ You can also [add a litter mat](https://www.amazon.com/gp/product/B07L8KGJZL/). 
 * Feed Scoop <https://www.amazon.com/gp/product/B0068MX6IC>
 * Sweet PDZ <https://www.tractorsupply.com/tsc/product/sweet-pdz-stall-refresher-25-lb?cm_vc=-10011>
 * Vittle Vault <https://www.amazon.com/gp/product/B0002H3S5K/>
-* Litter Genie litter box https://www.amazon.com/gp/product/B07FDHBM5N/
+* Litter Genie litter box [https://www.amazon.com/gp/product/B07FDHBM5N/](<* https://www.amazon.com/gp/product/B07FDHBM5N/>)
 * Litter tracking mat <https://www.amazon.com/gp/product/B07L8KGJZL/>
 
 # Food
