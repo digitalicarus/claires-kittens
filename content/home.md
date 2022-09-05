@@ -1,10 +1,12 @@
 ---
-date: 2022-08-22T04:25:10.777Z
 title: Claire's Kittens
 heading: Claire's Kittens
-mom-cat-name: Claire
-mom-cat-description: Claire is cool. Test23
+banner: media/screen-shot-2022-09-04-at-11.47.16-pm.png
+mom-page-link: Superdude
+mom-link: Superdude
+kittens:
+  - description: Superdude is basically invisible
+    picture: media/screen-shot-2022-08-27-at-11.16.29-am.png
+    link: Superdude
 ---
-test233. Is this local? How about now?
-
-![](img/screen-shot-2022-08-21-at-11.19.22-pm.png)
+TESTa

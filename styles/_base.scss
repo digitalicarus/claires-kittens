@@ -1,0 +1,51 @@
+// top-level styles for app
+html:not([preview-parent]), body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+html:not([preview-parent]) {
+  body {
+    font-size: 16px;
+    @apply text-slate-800;
+  }
+  body * {
+    box-sizing: border-box;
+  }
+  [data-reactroot] {
+    height: 100%;
+  }
+}
+
+// adjustments for iframe preview container in Netlify CMS
+html[preview-container] {
+  body > div, .frame-content {
+    height: inherit; 
+  }
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+a {
+  @apply text-blue-700;
+}
+
+.subpage-container {
+  @apply px-16 py-4;
+}
+
+header.subpage-header {
+  font-family: 'Satisfy';
+  @apply text-center text-4xl m-10;
+  &:before, &:after {
+    content: '  🐾  '
+  }
+}

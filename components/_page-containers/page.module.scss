@@ -1,0 +1,22 @@
+
+$header-height: 50px;
+.page-container {
+  @apply text-slate-800;
+  font-family: 'Comfortaa';
+  background-color: #eee;
+
+  height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+
+  .app-header {
+    @apply absolute z-20 w-full opacity-90 backdrop-blur bg-white;
+    height: $header-height;
+  }
+
+  & > .main-view{
+    height: calc(100% - #{$header-height});
+    margin-top: $header-height;
+  }
+}
+

@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+#  name: test-repo
+  branch: main # Branch to update (optional; defaults to master)
+local_backend: 
+  # when using a custom proxy server port
+  url: http://localhost:8082/api/v1
+  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+  allowed_hosts: ['192.168.0.1']
+media_folder: public/media/
+public_folder: media
+collections:
+  - label: "Main Site Pages"
+    name: "pages"
+    files:
+    - label: "Home Page"
+      name: "home"
+      file: "content/home.md"
+      fields:
+        - { label: "Site Title", name: "title", widget: "string", required: true }
+        - { label: "Site Banner Image", name: "banner", widget: "image", required: true }
+        - { label: "About Mom and Kittens", name: "body", widget: "markdown" }
+        - { 
+            label: "Mom Cat Page Link", 
+            name: "mom-link", 
+            widget: "relation", 
+            collection: "cats",
+            value_field: "name",
+            search_fields: ["name"]
+          }
+        - label: "Kittens"
+          name: "kittens"
+          widget: list
+          fields:
+            - { label: "Short Description", name: "description", widget: "string", required: true}
+            - { label: "Featured Picture", name: "picture", widget: "image" }
+            - { 
+                label: "Kitten Page Link", 
+                name: "link", 
+                widget: "relation",
+                collection: "cats",
+                value_field: "name",
+                search_fields: ["name"]
+              }
+    - label: "Adoption Info"
+      name: "adoption-info"
+      file: "content/adoption-info.md"
+      fields:
+        - { label: "Page Content", name: "body", widget: "markdown" }
+    - label: "Cat Ownership"
+      name: "cat-ownership"
+      file: "content/cat-ownership.md"
+      fields:
+        - { label: "Page Content", name: "body", widget: "markdown" }
+  - label: "Cat Pages"
+    name: "cats"
+    folder: "content/cats"
+    create: true
+    identifier_field: name
+    fields:
+      - { label: "Cat Name", name: "name", widget: "string" }
+      - { label: "Pictures", name: "pictures", widget: "image" }
+      - { label: "About This Cat", name: "body", widget: "markdown" }
+
