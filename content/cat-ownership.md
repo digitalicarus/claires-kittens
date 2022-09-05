@@ -1,12 +1,22 @@
-# Behavioral Stuff
+# Behavior
 
-Cats have to scratch. “Declawing” is literally cutting off their toes at the first knuckle and is pretty barbaric. The best thing to do when cats are hunting, clawing, etc is to keep providing alternatives to stuff they shouldn’t use until you find stuff they like. We keep tons of corrugated cardboard scratchers around the house and a few sisal towers.
+## Scratching
 
-Cats will do stuff like eat too fast and throw up, develop hairballs and throw up. For that I recommend scotch guarding your rugs and keeping a jug of Nature’s Miracle Stain and Odor remover and a spray bottle to refill. <https://www.amazon.com/Natures-Miracle-Stain-Odor-Remover/dp/B072FVZ1Z9/>
+Cats *need* to scratch. “Declawing” is removal of their toes at the first knuckle, which is a barbaric surgery. The best thing to do when cats are hunting or clawing the wrong things is to continue providing alternatives until you find some things they prefer. For example, we keep corrugated cardboard scratchers around the house and a few sisal towers at strategic locations.
 
-If cats are peeing or pooping where they shouldn’t then they don’t like the box or have a health problem. Gotta talk to the vet.
+## Vomit
 
-# Litter![](https://lh6.googleusercontent.com/UowS-PWbSdnv19zGxit00fDarrFotqD_ah-zxHJDxHE0Cbny0E-YJk6Dj8G5M_oyy20dSkg3qTUhA79PBeJdqhJSUk5TlRLtzDdRcZmrdVmVwYPzUaIomKDfzyVoL66C_hGld9G5TJufhzM0-beN9w)
+Cats may eat too fast and throw up. they also develop hairballs over time from grooming. Consider scotch guarding your rugs and keeping a jug of Nature’s Miracle Stain and Odor remover and a spray bottle to refill. <https://www.amazon.com/Natures-Miracle-Stain-Odor-Remover/dp/B072FVZ1Z9/>. 
+
+For eating too fast you can try a "puzzle feeder" which slows down their ability to gulp down food. For hairballs you can brush them regularly, such as once a week. This will keep them happy and healthy. Brushing regularly is a nice ritual that will keep your carpets clean and your bond with your cats stronger.
+
+## Bathroom problems
+
+If cats are peeing or pooping where they shouldn’t then they don’t like the box or have a health problem. Time to visit the vet.
+
+# Litter
+
+## Our Litter Setup
 
 * We have the litter in the garage and a cat door cut into the door to the house with a closable flap for when we need to open up the garage.
 * We use storage totes with a cut out. They make cheap nice large boxes. Try to cut and sand so there aren’t any sharp edges. Try to find a tote that doesn’t have a lot of bends and reinforcement at the base that will make scooping more difficult. Rounded square inner edges are best. These actually tend to be cheaper than the reinforced style molds.
@@ -15,6 +25,14 @@ If cats are peeing or pooping where they shouldn’t then they don’t like the 
 * We’ve had older cats that had trouble and would sometimes pee outside the box. There’s a horse stall product called Sweet PDZ that can soak it up and eliminate the ammonia smell. Then you can just vacuum it up. 
 * We use Dr. Elsey’s Ultra Clumping cat litter.
 * For outdoor cats we keep HEB food in a container called a Vittle Vault. It’s a very good food safe container.
+
+## A More Modest Setup
+
+The [Litter Genie litter box](https://www.amazon.com/gp/product/B07FDHBM5N/) is basic and an excellent design. Some reviewers report cracks around the handles after some time or even upon arrival. For small cracks near edges or handles you can use a lighter to reflow the flexible plastic. This will seal the crack and prevent it from spreading. 
+
+You can also [add a litter mat](https://www.amazon.com/gp/product/B07L8KGJZL/). This will catch a lot of tracked litter. You can vacuum them or hose them down and dry them outside.
+
+
 
 ## Links
 
@@ -28,12 +46,16 @@ If cats are peeing or pooping where they shouldn’t then they don’t like the 
 * Feed Scoop <https://www.amazon.com/gp/product/B0068MX6IC>
 * Sweet PDZ <https://www.tractorsupply.com/tsc/product/sweet-pdz-stall-refresher-25-lb?cm_vc=-10011>
 * Vittle Vault <https://www.amazon.com/gp/product/B0002H3S5K/>
+* Litter Genie litter box https://www.amazon.com/gp/product/B07FDHBM5N/
+* Litter tracking mat <https://www.amazon.com/gp/product/B07L8KGJZL/>
 
 # Food
 
-For indoor cats we mostly use Purina Indoor Advantage <https://www.purina.com/purina-one/cats/dry-cat-food/indoor-cat-food>. 
+For kittens our go-to food is IAMs proactive healthy kitten <https://www.iams.com/cat/cat-food/buy/iams-proactive-health-healthy-kitten>
 
-For outdoor cats we use HEB Adult Complete <https://www.heb.com/product-detail/h-e-b-texas-pets-adult-complete-formula-dry-cat-food/1910808>
+For indoor adult cats we mostly use Purina Indoor Advantage <https://www.purina.com/purina-one/cats/dry-cat-food/indoor-cat-food>. 
+
+For outdoor cats and as a morning treat for our boys we use HEB Adult Complete <https://www.heb.com/product-detail/h-e-b-texas-pets-adult-complete-formula-dry-cat-food/1910808>
 
 # Toys/Scratchers
 
