@@ -18,10 +18,12 @@ If cats are peeing or pooping where they shouldn’t then they don’t like the 
 
 ## Our Litter Setup
 
+![](media/screen-shot-2022-09-05-at-5.29.57-pm.png)
+
 * We have the litter in the garage and a cat door cut into the door to the house with a closable flap for when we need to open up the garage.
 * We use storage totes with a cut out. They make cheap nice large boxes. Try to cut and sand so there aren’t any sharp edges. Try to find a tote that doesn’t have a lot of bends and reinforcement at the base that will make scooping more difficult. Rounded square inner edges are best. These actually tend to be cheaper than the reinforced style molds.
 * The totes sit on a horse stall mat from Tractor Supply. The open box is now another tote. It used to be an open box and the tray underneath is a clothes washer drain tray. 
-* I keep a shop vac next to the litter and a galvanized metal can with a feed scoop for topping off the litter.
+* > I keep a shop vac next to the litter and a galvanized metal can with a feed scoop for topping off the litter.
 * We’ve had older cats that had trouble and would sometimes pee outside the box. There’s a horse stall product called Sweet PDZ that can soak it up and eliminate the ammonia smell. Then you can just vacuum it up. 
 * We use Dr. Elsey’s Ultra Clumping cat litter.
 * For outdoor cats we keep HEB food in a container called a Vittle Vault. It’s a very good food safe container.
