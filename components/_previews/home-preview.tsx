@@ -7,7 +7,6 @@ interface HomePreviewProps extends PreviewTemplateComponentProps {}
 
 const HomePreview: React.FC<HomePreviewProps> = ({ entry, document }) => {
   const title = entry.getIn(['data', 'title']);
-  const heading = entry.getIn(['data', 'heading']);
   const banner = entry.getIn(['data', 'banner']);
   const aboutTheCats = entry.getIn(['data', 'body']);
   const momLink = entry.getIn(['data', 'mom-link']);
@@ -18,7 +17,6 @@ const HomePreview: React.FC<HomePreviewProps> = ({ entry, document }) => {
       <PreviewPage document={document}>
         <Home
           title={title}
-          heading={heading}
           bannerImg={banner}
           aboutTheCats={aboutTheCats}
           momLink={momLink}
