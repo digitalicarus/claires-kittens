@@ -31,7 +31,6 @@ const Home: React.FC<IHomeProps> = ({
       <section>
         <header className="subpage-header">About Claire</header>
         <ReactMarkdown>{aboutTheCats}</ReactMarkdown>
-        {momLink}
       </section>
       <section id="the-kittens">
         <header className="subpage-header">The Kittens</header>
