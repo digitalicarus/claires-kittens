@@ -41,6 +41,16 @@ a {
 
 .subpage-container {
   @apply desktop:py-4 desktop:px-16 handset:p-4;
+
+  h1, h2, h3 {
+    @apply my-2;
+  }
+  p {
+    @apply p-2;
+  }
+  a {
+    @apply handset:break-words;
+  }
 }
 
 header.subpage-header {
