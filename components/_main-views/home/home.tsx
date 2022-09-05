@@ -4,7 +4,6 @@ import styles from './home.module.scss';
 
 export interface IHomeProps extends PropsWithChildren {
   title: string;
-  heading: string;
   bannerImg: string;
   aboutTheCats?: string; // markdown 
   momLink: string;
@@ -19,7 +18,6 @@ export interface IKittenInfo {
 
 const Home: React.FC<IHomeProps> = ({
   title, 
-  heading, 
   bannerImg, 
   aboutTheCats = '', 
   momLink, 
@@ -29,8 +27,8 @@ const Home: React.FC<IHomeProps> = ({
     <header style={ {backgroundImage: `url('${bannerImg}'`} }>
       <h1>{ title }</h1>
     </header>
-    <main>
-      <section id="about">
+    <main className="subpage-container">
+      <section>
         <header className="subpage-header">About Claire</header>
         <ReactMarkdown>{aboutTheCats}</ReactMarkdown>
         {momLink}

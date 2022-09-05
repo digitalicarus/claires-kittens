@@ -1,0 +1,82 @@
+@import '/styles/variables';
+
+.app-header {
+  @apply desktop:h-full;
+
+  :global {
+    header {
+      height: $header-height; 
+      @apply 
+        relative
+        flex 
+        justify-center 
+        items-center;
+
+      h1 {
+        @apply font-scripty text-2xl;
+      }
+      .menu-toggle {
+        width: $header-height;
+        @apply 
+          desktop:hidden
+          cursor-pointer
+          absolute
+          right-2
+          h-full
+          text-3xl;
+      }
+    }
+
+    nav {
+      @apply 
+        desktop:flex 
+        desktop:justify-between 
+        desktop:h-full 
+        desktop:px-10
+        desktop:absolute
+        desktop:top-0
+        desktop:w-full
+        overflow-hidden
+        handset:max-h-screen
+        transition-maxHeight
+        ease-in-out
+        duration-300;
+
+      &.hide {
+        @apply handset:max-h-0;
+      }
+
+      ul {
+        @apply 
+          flex
+          handset:flex-col
+          m-0 
+          p-0 
+          list-none; 
+
+        li {
+          @apply 
+            desktop:h-full 
+            desktop:w-auto
+            handset:w-full;
+        }
+        a {
+          height: $header-height; 
+          
+          @apply 
+            flex 
+            justify-center 
+            items-center
+            desktop:h-full 
+            px-4
+            no-underline
+            hover:bg-pink-100;
+
+          &.active, &:active {
+            @apply bg-pink-100;
+          }
+        }
+      }
+    }
+  }
+}

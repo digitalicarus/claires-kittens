@@ -1,0 +1,34 @@
+@import '/styles/variables';
+
+.page-container {
+  background-color: #eee;
+
+  height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+
+  :global {
+    [id="home"] {
+      @apply w-0 h-0;
+      font-size: 0;
+    }
+    .app-header {
+      height: $header-height;
+      @apply 
+        absolute 
+        z-20 
+        w-full 
+        opacity-90 
+        bg-white
+        handset:h-auto;
+    }
+    .header-spacer {
+      height: $header-height
+    }
+  }
+
+  & > :global(.main-view){
+    @apply h-full;
+  }
+}
+

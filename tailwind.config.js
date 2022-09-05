@@ -5,7 +5,19 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    screens: {
+      handset: { max: '800px' },
+      desktop: '801px'
+    },
+    fontFamily: {
+      'scripty': ['Satisfy'],
+      'default': ['Comfortaa']
+    },
+    extend: {
+      transitionProperty: {
+        'maxHeight': 'max-height'
+      }
+    }
   },
   plugins: [],
 }

@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect } from "react";
-import styles from './page.module.scss';
+import styles from './page-containers.module.scss';
 
 interface PreviewPageProps extends PropsWithChildren { 
   document: Document

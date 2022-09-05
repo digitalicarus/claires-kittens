@@ -6,7 +6,7 @@ import SitePage from "@/components/_page-containers/site-page";
 
 
 const IndexPage: React.FC<IHomeProps> = ({
-  title, heading, bannerImg, aboutTheCats, momLink, kittens = []
+  title, bannerImg, aboutTheCats, momLink, kittens = []
 }) => (
   <>
     <Head>
@@ -15,7 +15,6 @@ const IndexPage: React.FC<IHomeProps> = ({
     <SitePage>
       <Home
         title={title}
-        heading={heading}
         bannerImg={bannerImg}
         aboutTheCats={aboutTheCats}
         momLink={momLink}
@@ -31,7 +30,6 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
   return { 
     props: { 
       title: attributes.title, 
-      heading: attributes.heading,
       bannerImg: attributes.banner,
       aboutTheCats: attributes.body || 'nothing?',
       momLink: attributes['mom-link'],
