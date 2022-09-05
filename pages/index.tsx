@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { GetStaticProps } from "next";
 import Home, { IHomeProps } from "@/components/_main-views/home/home";
-import { attributes, body } from '../content/home.md'
+import { body, attributes } from '../content/home.md'
 import SitePage from "@/components/_page-containers/site-page";
 
 
@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
     props: { 
       title: attributes.title, 
       bannerImg: attributes.banner,
-      aboutTheCats: attributes.body || 'nothing?',
+      aboutTheCats: body,
       momLink: attributes['mom-link'],
       kittens: attributes.kittens
     }
