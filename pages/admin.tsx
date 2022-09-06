@@ -19,6 +19,8 @@ export default function AdminPage () {
       CMS.registerPreviewTemplate('adoption-info', AdoptionInfoPreview);
       CMS.registerPreviewTemplate('cat-ownership', CatOwnershipPreview);
       CMS.registerPreviewTemplate('cat', CatPreview);
+
+      document.querySelector('html')?.setAttribute('cms-admin', '');
     })();
   }, [] /* only once */);
 

@@ -2,9 +2,10 @@
 title: Claire's Kittens
 heading: Claire's Kittens
 banner: media/screen-shot-2022-09-04-at-11.47.16-pm.png
-mom-page-link: Superdude
-mom-link: Superdude
-kittens: []
+kittens:
+  - description: he's runtyyy
+    picture: media/screen-shot-2022-09-05-at-6.07.13-pm.png
+    link: '{ "name": "Runty", "slug": "runty" }'
 ---
 Claire is a kitten herself at near or under 1 year old. She was frolicking near our home in late Spring 2022. After a little while she started to look pretty rough. Her coat was coarse and she had scabs on her skin probably from flea allergies. It was about to be over 100 degrees outside as the summer set in. We took her to the vet and found out she was about half way into her pregnancy. We had no choice but to take her in. Claire couldn't receive antibiotics or vaccines due to the pregnancy. We took care of her and eventually her coat became shiny and her skin issues cleared up. We were able to get her fully healthy weeks before the kittens finally arrived. 
 

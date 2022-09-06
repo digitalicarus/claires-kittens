@@ -1,26 +1,13 @@
 import { PropsWithChildren } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from './home.module.scss';
-
-export interface IHomeProps extends PropsWithChildren {
-  title: string;
-  bannerImg: string;
-  aboutTheCats?: string; // markdown 
-  momLink: string;
-  kittens?: IKittenInfo[]
-}
-
-export interface IKittenInfo {
-  description: string; // markdown
-  picture: string;
-  link: string;
-}
+import { IHomeProps, KittenSummaryInfo } from "./home.types";
+import KittenSummary from "./kitten-summary/kitten-summary";
 
 const Home: React.FC<IHomeProps> = ({
   title, 
   bannerImg, 
   aboutTheCats = '', 
-  momLink, 
   kittens = []
 }) => (
   <div className={styles.home}>
@@ -34,7 +21,15 @@ const Home: React.FC<IHomeProps> = ({
       </section>
       <section id="the-kittens">
         <header className="subpage-header">The Kittens</header>
-        {kittens.map(kitten => JSON.stringify(kitten))}
+        {
+          kittens.map((kittenInfo: KittenSummaryInfo) => (
+            <KittenSummary 
+              description={kittenInfo.description} 
+              picture={kittenInfo.picture} 
+              link={kittenInfo.link}
+            ></KittenSummary>  
+          ))
+        }
       </section>
       <section id="gallery">
         <header className="subpage-header">Gallery</header>

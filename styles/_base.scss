@@ -1,11 +1,11 @@
 @import url('//fonts.googleapis.com/css?family=Satisfy:400');
 @import url('//fonts.googleapis.com/css?family=Comfortaa:400,300,600');
 
-// top-level styles for app - omit from Netlify CMS preview to avoid polluting editor
-html:not([preview-parent]), body {
+// top-level styles for app - omit from Netlify CMS admin to avoid polluting editor
+html:not([cms-admin]), body {
   @apply m-0 p-0 h-full;
 }
-html:not([preview-parent]) {
+html:not([cms-admin]) {
   body {
     //-- set base font styles for app
     font-size: 16px;

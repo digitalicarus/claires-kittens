@@ -20,7 +20,6 @@ const PreviewPage: React.FC<PreviewPageProps> = ({ children, document }) => {
   useEffect(() => {
     //-- relocate css module <style> tags into the iframe created by Netlify CMS preview
     const parentDoc = window.document;
-    const parentHtmlElement = parentDoc.querySelector('html');
     const previewHtmlElement = document.querySelector('html');
 
     const styleTexts = Array.prototype.slice.call(parentDoc.querySelectorAll('style'))
@@ -29,7 +28,6 @@ const PreviewPage: React.FC<PreviewPageProps> = ({ children, document }) => {
 
     styleTexts.forEach(cssText => appendStyleTextToFrameHead(cssText));
     previewHtmlElement!.setAttribute('preview-container', '');
-    parentHtmlElement!.setAttribute('preview-parent', '');
   }, []);
 
   return (

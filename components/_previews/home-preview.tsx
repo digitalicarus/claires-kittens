@@ -2,6 +2,7 @@ import React from "react";
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 import Home from "@/components/_main-views/home/home";
 import PreviewPage from "@/components/_page-containers/preview-page";
+import { IKittenSummaryInfoParams, KittenSummaryInfo } from "../_main-views/home/home.types";
 
 interface HomePreviewProps extends PreviewTemplateComponentProps {}
 
@@ -9,8 +10,10 @@ const HomePreview: React.FC<HomePreviewProps> = ({ entry, document }) => {
   const title = entry.getIn(['data', 'title']);
   const banner = entry.getIn(['data', 'banner']);
   const aboutTheCats = entry.getIn(['data', 'body']);
-  const momLink = entry.getIn(['data', 'mom-link']);
-  const kittens = entry.getIn(['data', 'kittens']);
+  const kittens = entry
+    .getIn(['data', 'kittens'])
+    .toJS() // convert immutableJS map data to JS regular object
+    .map((kitten: IKittenSummaryInfoParams) => new KittenSummaryInfo(kitten));
 
   return (
     <>
@@ -19,7 +22,6 @@ const HomePreview: React.FC<HomePreviewProps> = ({ entry, document }) => {
           title={title}
           bannerImg={banner}
           aboutTheCats={aboutTheCats}
-          momLink={momLink}
           kittens={kittens}
         ></Home> 
       </PreviewPage>

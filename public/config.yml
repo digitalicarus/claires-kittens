@@ -20,28 +20,21 @@ collections:
         - { label: "Site Title", name: "title", widget: "string", required: true }
         - { label: "Site Banner Image", name: "banner", widget: "image", required: true }
         - { label: "About Mom and Kittens", name: "body", widget: "markdown" }
-        - { 
-            label: "Mom Cat Page Link", 
-            name: "mom-link", 
-            widget: "relation", 
-            collection: "cats",
-            value_field: "name",
-            search_fields: ["name"]
-          }
         - label: "Kittens"
           name: "kittens"
           widget: list
           fields:
-            - { label: "Short Description", name: "description", widget: "string", required: true}
-            - { label: "Featured Picture", name: "picture", widget: "image" }
             - { 
                 label: "Kitten Page Link", 
                 name: "link", 
                 widget: "relation",
                 collection: "cats",
-                value_field: "name",
+                value_field: "{ \"name\": \"{{name}}\", \"slug\": \"{{slug}}\" }",
+                display_fields: ["name"],
                 search_fields: ["name"]
               }
+            - { label: "Featured Picture", name: "picture", widget: "image" }
+            - { label: "Short Description of Kitten", name: "description", widget: "string", required: true}
     - label: "Adoption Info"
       name: "adoption-info"
       file: "content/adoption-info.md"
