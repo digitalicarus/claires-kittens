@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next";
-import ReactMarkdown from "react-markdown";
 import body from '../content/adoption-info.md'
 import SitePage from "@/components/_page-containers/site-page";
 import AdoptionInfo from "@/components/_main-views/adoption-info";
