@@ -13,6 +13,12 @@ export default function AdminPage () {
   useEffect(() => {
     (async () => {
       const CMS = (await import('netlify-cms-app')).default;
+      const adminDocument = document.querySelector('html');
+      const buildStatus = document.createElement('div');
+
+      buildStatus.id = 'netlify-build-status';
+      buildStatus.style.visibility = 'hidden';
+
       CMS.init();
 
       CMS.registerPreviewTemplate('home', HomePreview);
@@ -20,7 +26,17 @@ export default function AdminPage () {
       CMS.registerPreviewTemplate('cat-ownership', CatOwnershipPreview);
       CMS.registerPreviewTemplate('cat', CatPreview);
 
-      document.querySelector('html')?.setAttribute('cms-admin', '');
+      adminDocument?.setAttribute('cms-admin', '');
+      adminDocument?.appendChild(buildStatus);
+
+      function refreshBuildStatus () {
+        buildStatus.innerHTML = `
+          <img src="https://api.netlify.com/api/v1/badges/39274c69-39fe-45ca-ab65-ea7ed7ccb755/deploy-status" alt="Netlify Status">
+        `;
+      }
+
+      setInterval(refreshBuildStatus, 2000);
+      refreshBuildStatus();
     })();
   }, [] /* only once */);
 

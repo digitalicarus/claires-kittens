@@ -17,6 +17,11 @@ html:not([cms-admin]) {
   }
 }
 
+html[cms-admin] #netlify-build-status {
+  @apply absolute bottom-0 left-0 m-4;
+  visibility: visible !important;
+}
+
 //-- adjustments specifically for iframe preview container in Netlify CMS
 html[preview-container] {
   body > div, .frame-content {
