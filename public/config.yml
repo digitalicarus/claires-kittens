@@ -35,6 +35,21 @@ collections:
               }
             - { label: "Featured Picture", name: "picture", widget: "image" }
             - { label: "Short Description of Kitten", name: "description", widget: "string", required: true}
+        - label: "Gallery Item"
+          name: "gallery"
+          widget: list
+          fields: 
+            - {
+              label: "Description",
+              name: "description",
+              required: false,
+              widget: "string"
+            }
+            - {
+              label: "Image or Youtube Link",
+              name: "src",
+              widget: "image"
+            }
     - label: "Adoption Info"
       name: "adoption-info"
       file: "content/adoption-info.md"

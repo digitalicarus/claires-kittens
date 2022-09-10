@@ -1,3 +1,4 @@
+import Gallery from "@/components/gallery/gallery";
 import { PropsWithChildren } from "react";
 import ReactMarkdown from "react-markdown";
 import styles from './home.module.scss';
@@ -8,7 +9,8 @@ const Home: React.FC<IHomeProps> = ({
   title, 
   bannerImg, 
   aboutTheCats = '', 
-  kittens = []
+  kittens = [],
+  gallerySources = []
 }) => (
   <div className={styles.home}>
     <header style={ {backgroundImage: `url('${bannerImg}'`} }>
@@ -33,6 +35,7 @@ const Home: React.FC<IHomeProps> = ({
       </section>
       <section id="gallery">
         <header className="subpage-header">Gallery</header>
+        <Gallery sources={gallerySources}></Gallery>
       </section>
     </main>
   </div>

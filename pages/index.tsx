@@ -7,16 +7,18 @@ import { IHomeProps, IKittenSummaryInfoParams, KittenSummaryInfo} from "@/compon
 
 import { body, attributes } from '../content/home.md'
 import { PropsWithChildren } from "react";
+import { IGallerySource } from "@/components/gallery/gallery";
 
 export interface IIndexProps extends PropsWithChildren {
   title: string;
   bannerImg: string;
   aboutTheCats?: string; // markdown 
-  kittens?: IKittenSummaryInfoParams[]
+  kittens?: IKittenSummaryInfoParams[],
+  gallerySources: IGallerySource[]
 }
 
 const IndexPage: React.FC<IIndexProps> = ({
-  title, bannerImg, aboutTheCats, kittens = []
+  title, bannerImg, aboutTheCats, kittens = [], gallerySources
 }) => {
   const kittensTransformed = kittens.map((kitten: IKittenSummaryInfoParams) => new KittenSummaryInfo(kitten))
   
@@ -31,6 +33,7 @@ const IndexPage: React.FC<IIndexProps> = ({
           bannerImg={bannerImg}
           aboutTheCats={aboutTheCats}
           kittens={kittensTransformed}
+          gallerySources={gallerySources}
         ></Home>
       </SitePage>
     </>
@@ -47,7 +50,8 @@ export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
       aboutTheCats: body,
       //-- direct from markdown - getStaticProps members must be JSON serializable objects
       // https://nextjs.org/docs/api-reference/data-fetching/get-static-props
-      kittens: attributes.kittens 
+      kittens: attributes.kittens,
+      gallerySources: attributes.gallery
     }
   }
 };

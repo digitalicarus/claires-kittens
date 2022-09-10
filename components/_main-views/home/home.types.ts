@@ -1,10 +1,12 @@
+import { IGallerySource } from "@/components/gallery/gallery";
 import { PropsWithChildren } from "react";
 
 export interface IHomeProps extends PropsWithChildren {
   title: string;
   bannerImg: string;
   aboutTheCats?: string; // markdown 
-  kittens?: KittenSummaryInfo[]
+  kittens?: KittenSummaryInfo[],
+  gallerySources?: IGallerySource[]
 }
 
 export interface IKittenSummaryLink {

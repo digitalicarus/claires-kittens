@@ -15,6 +15,8 @@ const HomePreview: React.FC<HomePreviewProps> = ({ entry, document }) => {
     .toJS() // convert immutableJS map data to JS regular object
     .map((kitten: IKittenSummaryInfoParams) => new KittenSummaryInfo(kitten));
 
+  const gallerySources = entry.getIn(['data', 'gallery']).toJS();
+
   return (
     <>
       <PreviewPage document={document}>
@@ -23,6 +25,7 @@ const HomePreview: React.FC<HomePreviewProps> = ({ entry, document }) => {
           bannerImg={banner}
           aboutTheCats={aboutTheCats}
           kittens={kittens}
+          gallerySources={gallerySources}
         ></Home> 
       </PreviewPage>
     </>
