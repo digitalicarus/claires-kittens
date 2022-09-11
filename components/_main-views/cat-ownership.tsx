@@ -8,7 +8,7 @@ interface ICatOwnershipProps extends PropsWithChildren {
 const CatOwnership: React.FC<ICatOwnershipProps> = ({ content }) => (
   <div className="subpage-container">
     <header className="subpage-header">
-      Cat Ownership Tips
+      Care Tips
     </header>
     <ReactMarkdown>{content}</ReactMarkdown>
   </div>

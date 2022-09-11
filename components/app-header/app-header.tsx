@@ -36,7 +36,7 @@ const AppNav: React.FC<IAppHeaderProps> = ({ className, siteTitle }) => {
         </ul>
         <ul>
           <li>
-            <Link href="/cat-ownership">Cat Ownership Tips</Link>
+            <Link href="/cat-ownership">Care Tips</Link>
           </li>
           <li>
             <Link href="/adoption-info">How to Adopt</Link>

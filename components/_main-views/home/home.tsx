@@ -1,9 +1,22 @@
 import Gallery from "@/components/gallery/gallery";
-import { PropsWithChildren } from "react";
 import ReactMarkdown from "react-markdown";
-import styles from './home.module.scss';
 import { IHomeProps, KittenSummaryInfo } from "./home.types";
-import KittenSummary from "./kitten-summary/kitten-summary";
+import styles from './home.module.scss';
+import Image from "next/image";
+import Link from "next/link";
+
+const KittenSummary: React.FC<KittenSummaryInfo> = ({ description, picture, link }) => {
+  return (
+    <div className="kitten-summary">
+      <img src={'/'+picture} />
+      {link.name}
+      <p>
+        {description}
+        <br/>
+      </p>
+    </div>
+  );
+};
 
 const Home: React.FC<IHomeProps> = ({
   title, 
@@ -23,15 +36,21 @@ const Home: React.FC<IHomeProps> = ({
       </section>
       <section id="the-kittens">
         <header className="subpage-header">The Kittens</header>
-        {
-          kittens.map((kittenInfo: KittenSummaryInfo) => (
-            <KittenSummary 
-              description={kittenInfo.description} 
-              picture={kittenInfo.picture} 
-              link={kittenInfo.link}
-            ></KittenSummary>  
-          ))
-        }
+        <div className="kittens-container">
+          {
+            kittens.map((kittenInfo: KittenSummaryInfo) => (
+              <div className="kitten-summary">
+                <div>
+                  <h2><Link href={`/cats/${kittenInfo.link.slug}`}>{kittenInfo.link.name}</Link></h2>
+                  <Link href={`/cats/${kittenInfo.link.slug}`}><img src={'/'+kittenInfo.picture} /></Link>
+                </div>
+                <div className="description">
+                  {kittenInfo.description}
+                </div>
+              </div>
+            ))
+          }
+        </div>
       </section>
       <section id="gallery">
         <header className="subpage-header">Gallery</header>

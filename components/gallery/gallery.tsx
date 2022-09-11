@@ -16,10 +16,12 @@ function getSourceContent (source: IGallerySource) {
 
   console.log('source!', source);
 
-  return isYoutube ? 
-    <iframe 
+  /*
       width="560" 
       height="315" 
+      */
+  return isYoutube ? 
+    <iframe 
       src={`https://www.youtube.com/embed/${youtubeId}`} 
       title="YouTube video player" 
       frameBorder="0" 
@@ -33,16 +35,16 @@ const Gallery: React.FC<IGalleryProps> = ({ sources = [] }) => {
   const [ modalMode, setModalMode ]= useState<boolean>(false);
   
   return (
-    <>
+    <div className={styles.gallery}>
       {
         sources.map((source: IGallerySource) => (
-          <div key={source.src} className={styles['gallery-item']}>
+          <div key={source.src} className="gallery-item">
             {getSourceContent(source)}
             {source.description ? <aside>{source.description}</aside> : <></>}
           </div>
         ))
       }
-    </>
+    </div>
   );
 };
 

@@ -20,7 +20,8 @@ export interface IIndexProps extends PropsWithChildren {
 const IndexPage: React.FC<IIndexProps> = ({
   title, bannerImg, aboutTheCats, kittens = [], gallerySources
 }) => {
-  const kittensTransformed = kittens.map((kitten: IKittenSummaryInfoParams) => new KittenSummaryInfo(kitten))
+  const kittensTransformed = kittens.map((kitten: IKittenSummaryInfoParams) => new KittenSummaryInfo(kitten));
+  console.log('kittens', kittensTransformed);
   
   return (
     <>

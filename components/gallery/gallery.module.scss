@@ -1,22 +1,52 @@
-.gallery-item {
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(380px, 1fr));
+  grid-gap: 0.5em;
+  align-items: center;
+  //grid-template-rows: repeat(auto-fill, minmax(340px, 1fr));
+  /* This is better for small screens, once min() is better supported */
+  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+  gap: 1rem;
 
-  &:hover {
-    aside {
-      transform: translateY(0%);
+  :global {
+    .gallery-item {
+      @apply
+        relative
+        overflow-hidden
+        bg-black
+        opacity-90;
+
+      background-image: radial-gradient(#0e0e0e 0.75px, transparent 0.75px);
+      background-size: 15px 15px;
+
+      &:hover {
+        aside {
+          transform: translateY(0%);
+        }
+      }
+        box-shadow: 1px 1px 12px black;
+
+      img, iframe {
+        min-width: 100%; 
+      }
+      iframe {
+        min-height: 340px; 
+      }
+
+      aside {
+        @apply 
+          absolute
+          top-0
+          p-2
+          w-full
+          text-xs
+          text-white;
+
+        background-color:rgba(0, 0, 0, 0.5);
+        transition: transform .1s ease-in-out;
+        transform: translateY(-100%);
+      }
     }
-  }
-
-  aside {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 16px;
-    background-color:rgba(0, 0, 0, 0.5);
-    transition: transform .1s ease-in-out;
-    transform: translateY(-100%);
-    color: white;
   }
 }

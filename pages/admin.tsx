@@ -31,11 +31,11 @@ export default function AdminPage () {
 
       function refreshBuildStatus () {
         buildStatus.innerHTML = `
-          <img src="https://api.netlify.com/api/v1/badges/39274c69-39fe-45ca-ab65-ea7ed7ccb755/deploy-status" alt="Netlify Status">
+          <img src="https://api.netlify.com/api/v1/badges/39274c69-39fe-45ca-ab65-ea7ed7ccb755/deploy-status?${Math.random()}" alt="Netlify Status">
         `;
       }
 
-      setInterval(refreshBuildStatus, 2000);
+      //setInterval(refreshBuildStatus, 5000);
       refreshBuildStatus();
     })();
   }, [] /* only once */);

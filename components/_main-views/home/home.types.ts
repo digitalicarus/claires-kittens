@@ -26,7 +26,7 @@ export class KittenSummaryInfo {
   constructor({ description, picture, link }: IKittenSummaryInfoParams) { 
       this.description = description;
       this.picture = picture;
-      this.link = JSON.parse(link) as IKittenSummaryLink;
+      this.link = link ? JSON.parse(link) as IKittenSummaryLink : { name: '', slug: '' };
   }
 }
 

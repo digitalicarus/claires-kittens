@@ -18,7 +18,7 @@ html:not([cms-admin]) {
 }
 
 html[cms-admin] #netlify-build-status {
-  @apply absolute bottom-0 left-0 m-4;
+  @apply absolute right-0 bottom-0 m-4;
   visibility: visible !important;
 }
 
@@ -64,7 +64,15 @@ header.subpage-header {
     text-center 
     text-4xl 
     my-10
+    handset:my-6
+    ml-5
     indent-6; // account for after content
+
+    /*
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.3) 50%, rgba(0,0,0,0) 70%);
+    border-image-slice: 1;
+    */
 
   &:after {
     content: ' 🐾 '
