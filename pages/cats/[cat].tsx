@@ -22,8 +22,12 @@ const CatPage: React.FC<ICatProps> = ({
 
 export default CatPage;
 
+//-- WIP ignore this
 export const getStaticPaths: GetStaticPaths = async () => {
-
+  return {
+    paths: [{ params: { id: 'fake' } }, { params: { id: 'fake2' } }],
+    fallback: false, // can also be true or 'blocking'
+  }
 };
 
 export const getStaticProps: GetStaticProps<ICatProps> = async () => {
