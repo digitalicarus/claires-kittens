@@ -25,7 +25,7 @@ export default CatPage;
 //-- WIP ignore this
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [{ params: { id: 'fake' } }, { params: { id: 'fake2' } }],
+    paths: [{ params: { cat: 'fake' } }, { params: { cat: 'fake2' } }],
     fallback: false, // can also be true or 'blocking'
   }
 };
