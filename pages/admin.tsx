@@ -24,7 +24,7 @@ export default function AdminPage () {
       CMS.registerPreviewTemplate('home', HomePreview);
       CMS.registerPreviewTemplate('adoption-info', AdoptionInfoPreview);
       CMS.registerPreviewTemplate('cat-ownership', CatOwnershipPreview);
-      CMS.registerPreviewTemplate('cat', CatPreview);
+      CMS.registerPreviewTemplate('cats', CatPreview);
 
       adminDocument?.setAttribute('cms-admin', '');
       adminDocument?.appendChild(buildStatus);

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PropsWithChildren, ReactComponentElement, useState } from "react";
 import styles from './gallery.module.scss';
 
@@ -14,12 +15,6 @@ function getSourceContent (source: IGallerySource) {
   const isYoutube = /youtube/.test(source.src);
   const youtubeId = isYoutube ? source.src.match(/.*v=([^&]+)/)![1] : null;
 
-  console.log('source!', source);
-
-  /*
-      width="560" 
-      height="315" 
-      */
   return isYoutube ? 
     <iframe 
       src={`https://www.youtube.com/embed/${youtubeId}`} 
@@ -28,7 +23,7 @@ function getSourceContent (source: IGallerySource) {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowFullScreen></iframe>
     :
-    <img src={source.src} />;
+    <a target="_blank" href={source.src}><img src={source.src} /></a>;
 }
 
 const Gallery: React.FC<IGalleryProps> = ({ sources = [] }) => {

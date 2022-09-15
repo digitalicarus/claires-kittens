@@ -3,6 +3,7 @@ import { PreviewTemplateComponentProps } from 'netlify-cms-core';
 import Home from "@/components/_main-views/home/home";
 import PreviewPage from "@/components/_page-containers/preview-page";
 import { IKittenSummaryInfoParams, KittenSummaryInfo } from "../_main-views/home/home.types";
+import { IGallerySource } from "../gallery/gallery";
 
 interface HomePreviewProps extends PreviewTemplateComponentProps {}
 
@@ -15,7 +16,14 @@ const HomePreview: React.FC<HomePreviewProps> = ({ entry, document }) => {
     .toJS() // convert immutableJS map data to JS regular object
     .map((kitten: IKittenSummaryInfoParams) => new KittenSummaryInfo(kitten));
 
-  const gallerySources = entry.getIn(['data', 'gallery']).toJS();
+  /** 
+    * While you are editing and add a gallery item it's blank. 
+    * This guards agains a blank entry causing an error in the component 
+    */
+  const gallerySources = entry
+    .getIn(['data', 'gallery'])
+    .toJS()
+    .filter((gallerySource: IGallerySource) => !!gallerySource.src); // only ones with a url
 
   return (
     <>

@@ -39,9 +39,13 @@
     .kitten-summary {
       max-width: 1000px;
       min-width: 800px;
-      margin: 2em auto;
+      @apply grid mx-auto;
+      //margin: 2em auto;
 
-      display: grid;
+      &:not(last-child) {
+        @apply mb-10;
+      }
+
       grid-template-columns: 1fr 2fr;
       gap: 1em;
 
@@ -54,7 +58,7 @@
         width: 100%;
       }
       h2 {
-        @apply m-0;
+        @apply m-0 handset:text-center;
       }
 
       .description {
