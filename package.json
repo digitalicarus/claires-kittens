@@ -18,7 +18,6 @@
     "@types/webpack-env": "^1.18.0",
     "autoprefixer": "^10.4.8",
     "frontmatter-markdown-loader": "^3.7.0",
-    "gray-matter": "^4.0.3",
     "netlify-cli": "^11.7.1",
     "postcss": "^8.4.16",
     "raw-loader": "^4.0.2",

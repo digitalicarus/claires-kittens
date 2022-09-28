@@ -2,7 +2,6 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import SitePage from "@/components/_page-containers/site-page";
 import Cat, { ICatProps } from '@/components/_main-views/cat';
 import { ParsedUrlQuery } from "querystring";
-import matter from "gray-matter";
 
 const CatPage: React.FC<ICatProps> = ({
   name, featuredPicture, about, gallerySources
