@@ -22,8 +22,13 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/images/*": ["public/images/*"],
-      "@/styles/*": ["styles/*"]
-    }
+      "@/styles/*": ["styles/*"],
+      "@/content/*": ["content/*"]
+    },
+    "types": [
+      "node",
+      "webpack-env" // allows use of require.context
+    ]
   },
   "include": [
     "next-env.d.ts",
