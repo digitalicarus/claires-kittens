@@ -13,7 +13,13 @@
         items-center;
 
       h1 {
-        @apply font-scripty text-2xl;
+        @apply 
+          absolute
+          z-10
+          font-scripty 
+          text-2xl
+          cursor-pointer
+          ;
       }
       .menu-toggle {
         width: $header-height;

@@ -11,3 +11,10 @@ export const renderMarkdown = (markdown: string, className = "") => (
     children={markdown}
   />
 );
+
+export const scrollToTop = (ele: HTMLElement | Window | null = window, smooth: boolean = true) => {
+  if (ele === null) { 
+    throw "scrollToTop: ele is null, current value of ref is probably not mounted";
+  }
+  ele.scrollTo({ top: 0, left: 0, behavior: smooth ? 'smooth' : 'auto' });
+}

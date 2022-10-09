@@ -6,9 +6,10 @@ import styles from './app-header.module.scss'
 interface IAppHeaderProps extends PropsWithChildren { 
   className: string;
   siteTitle: string;
+  siteTitleClick?: () => void;
 }
 
-const AppNav: React.FC<IAppHeaderProps> = ({ className, siteTitle }) => {
+const AppNav: React.FC<IAppHeaderProps> = ({ className, siteTitle, siteTitleClick = () => {} }) => {
   const [navHide, setNavHide] = useState<boolean>(true);
   const router = useRouter();
 
@@ -19,7 +20,7 @@ const AppNav: React.FC<IAppHeaderProps> = ({ className, siteTitle }) => {
   return (
     <div className={`${styles['app-header']} ${className}`}>
       <header>
-        <h1 className="site-title"><Link href="/#home">{ siteTitle }</Link></h1>
+        <h1 className="site-title" onClick={(e) => siteTitleClick()}>{ siteTitle }</h1>
         <button className="menu-toggle" onClick={(e) => setNavHide(!navHide)}>☰</button>
       </header>
       <nav className={ navHide ? 'hide':'' }>

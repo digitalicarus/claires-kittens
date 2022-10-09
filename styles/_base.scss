@@ -89,36 +89,6 @@ header.subpage-header {
   }
 }
 
-a.return-to-top-link {
-  @apply 
-    absolute
-    bottom-4
-    right-6
-
-    w-10
-    h-10
-
-    flex
-    items-center
-    justify-center
-
-    text-base
-    text-white
-    bg-black
-    rounded-md
-    opacity-30
-
-    transition-opacity
-    duration-300
-    ease-in-out
-    ;
-
-  &:hover {
-    @apply
-      opacity-75;
-  }
-}
-
 //-- Fix for cursor jumping to the end of the line on the markdown editor 
 // https://github.com/netlify/netlify-cms/issues/5092#issuecomment-1256321540
 [data-slate-editor] { 

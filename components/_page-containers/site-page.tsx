@@ -1,5 +1,6 @@
 import Head from "next/head"
-import { PropsWithChildren } from "react";
+import { createRef, PropsWithChildren } from "react";
+import { scrollToTop } from "utility-fns";
 import AppNav from "../app-header/app-header";
 import styles from './page-containers.module.scss';
 
@@ -16,20 +17,26 @@ const SitePage: React.FC<SitePageProps> = ({
   siteTitle = 'Claire\'s Kittens', 
   subtitle = null, 
   children 
-}) => (
-  <>
-    <Head>
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-      <title>{siteTitle}{subtitle && ` - ${subtitle}`}</title>
-    </Head>
-    <div className={styles['page-container']}>
-      <i id="home"></i>
-      <AppNav className="app-header" siteTitle={siteTitle}></AppNav>
-      <div className="header-spacer">&nbsp;</div>
-      <div className="main-view">{children}</div>
-      <a className="return-to-top-link" href="#home" title="return to top">⬆</a>
-    </div>
-  </>
-);
+}) => {
+  const containerRef = createRef<HTMLDivElement>();
+  return (
+    <>
+      <Head>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <title>{siteTitle}{subtitle && ` - ${subtitle}`}</title>
+      </Head>
+      <div className={styles['page-container']} ref={containerRef}>
+        <i id="home"></i>
+        <AppNav 
+          className="app-header" 
+          siteTitle={siteTitle} 
+          siteTitleClick={() => {scrollToTop(containerRef!.current)}}
+        ></AppNav>
+        <div className="header-spacer">&nbsp;</div>
+        <div className="main-view">{children}</div>
+      </div>
+    </>
+  );
+};
 
 export default SitePage;

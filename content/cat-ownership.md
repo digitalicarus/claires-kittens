@@ -1,4 +1,4 @@
-* [Needs and Behaviors](#behavior)
+* [Needs and Behaviors](#needs-and-behaviors)
   * [Scratching](#scratching)
   * [Catcidents](#catcidents)
   * [Bathroom issues](#bathroom-issues)
@@ -13,7 +13,7 @@
   * [Access](#access)
   * [Accidents and Cleanup](#accidents-and-cleanup)
 
-# Behavior
+# Needs and Behaviors
 
 ## Scratching
 
