@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<ICatProps> = async ({ ...ctx }) => {
     props: {
       name: attributes.name,
       featuredPicture: attributes['featured_picture'],
-      gallerySources: attributes.gallery,
+      gallerySources: attributes.gallery || [],
       about: body
     }
   };

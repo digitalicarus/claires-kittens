@@ -1,5 +1,4 @@
 import ReactMarkdown from "react-markdown";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 
