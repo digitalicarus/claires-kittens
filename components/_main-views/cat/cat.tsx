@@ -14,8 +14,8 @@ const Cat: React.FC<ICatProps> = ({ name, featuredPicture, about, gallerySources
   <div className={styles.cat}>
     <main className="subpage-container">
       <section className="max-w-screen-sm" >
-        <header className="subpage-header">{name}</header>
-        <img className="featured-image" src={`${featuredPicture}?nf_resize=fit&w=600`} />
+        <header className="subpage-header">{name ? name : '[ cat name ]'}</header>
+        { featuredPicture ? <img className="featured-image" src={`${featuredPicture}?nf_resize=fit&w=600`} /> : null }
         {renderMarkdown(about)}
       </section>
       <section>

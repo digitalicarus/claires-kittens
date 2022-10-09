@@ -1,14 +1,17 @@
 import React from "react";
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
-import AdoptionInfo from "pages/adoption-info";
+import AdoptionInfo from "@/components/_main-views/adoption-info";
+import PreviewPage from "../_page-containers/preview-page";
 
 interface AdoptionInfoPreviewProps extends PreviewTemplateComponentProps {}
 
-const AdoptionInfoPreview: React.FC<AdoptionInfoPreviewProps> = ({ entry }) => {
+const AdoptionInfoPreview: React.FC<AdoptionInfoPreviewProps> = ({ entry, document }) => {
   const body = entry.getIn(['data', 'body']);
 
   return (
-    <AdoptionInfo content={body}></AdoptionInfo>
+    <PreviewPage document={document}>
+      <AdoptionInfo content={body}></AdoptionInfo>
+    </PreviewPage>
   );
 };
 
