@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import SitePage from "@/components/_page-containers/site-page";
-import Cat, { ICatProps } from '@/components/_main-views/cat';
+import Cat, { ICatProps } from '@/components/_main-views/cat/cat';
 import { ParsedUrlQuery } from "querystring";
 
 const CatPage: React.FC<ICatProps> = ({
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<ICatProps> = async ({ ...ctx }) => {
     props: {
       name: attributes.name,
       featuredPicture: attributes['featured_picture'],
-      gallerySources: attributes.pictures,
+      gallerySources: attributes.gallery,
       about: body
     }
   };

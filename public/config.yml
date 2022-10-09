@@ -8,7 +8,7 @@ local_backend:
   # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
   allowed_hosts: ['192.168.0.1']
 media_folder: public/media/
-public_folder: media
+public_folder: /media
 collections:
   - label: "Main Site Pages"
     name: "pages"

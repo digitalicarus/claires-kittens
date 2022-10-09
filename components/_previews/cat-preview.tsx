@@ -1,6 +1,6 @@
 import React from "react";
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
-import Cat from "../_main-views/cat";
+import Cat from "../_main-views/cat/cat";
 import { IGallerySource } from "../gallery/gallery";
 import PreviewPage from "../_page-containers/preview-page";
 

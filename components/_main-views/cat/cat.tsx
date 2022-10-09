@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
-import ReactMarkdown from "react-markdown";
-import Gallery, { IGallerySource } from "../gallery/gallery";
+import { renderMarkdown } from "utility-fns";
+import Gallery, { IGallerySource } from "../../gallery/gallery";
+import styles from './cat.module.scss';
 
 export interface ICatProps extends PropsWithChildren { 
   name: string;
@@ -10,15 +11,15 @@ export interface ICatProps extends PropsWithChildren {
 }
 
 const Cat: React.FC<ICatProps> = ({ name, featuredPicture, about, gallerySources = [] }) => (
-  <div className="">
+  <div className={styles.cat}>
     <main className="subpage-container">
-      <section>
+      <section className="max-w-screen-sm" >
         <header className="subpage-header">{name}</header>
-        <img src={featuredPicture} />
-        <ReactMarkdown>{about}</ReactMarkdown>
+        <img className="featured-image" src={`${featuredPicture}?nf_resize=fit&w=600`} />
+        {renderMarkdown(about)}
       </section>
       <section>
-        <header className="subpage-header">Pics and Vids of {name}</header>
+        <header className="subpage-header">Gallery</header>
         <Gallery sources={gallerySources}></Gallery>
       </section>
 

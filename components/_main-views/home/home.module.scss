@@ -39,8 +39,7 @@
     .kitten-summary {
       max-width: 1000px;
       min-width: 800px;
-      @apply grid mx-auto;
-      //margin: 2em auto;
+      @apply grid;
 
       &:not(last-child) {
         @apply mb-10;
@@ -51,14 +50,20 @@
 
       @apply 
         handset:block 
-        handset:min-w-full
+        handset:max-w-full
         ;
-
+    
       img {
-        width: 100%;
+        @apply desktop:w-full handset:w-auto max-w-full;
       }
+      
+      
       h2 {
-        @apply m-0 handset:text-center;
+        @apply m-0;
+      }
+
+      aside {
+        @apply text-xs;
       }
 
       .description {

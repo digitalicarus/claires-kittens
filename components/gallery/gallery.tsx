@@ -23,7 +23,7 @@ function getSourceContent (source: IGallerySource) {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowFullScreen></iframe>
     :
-    <a target="_blank" href={source.src}><img src={source.src} /></a>;
+    <a target="_blank" href={source.src}><img src={`${source.src}?nf_resize=fit&w=300`} /></a>;
 }
 
 const Gallery: React.FC<IGalleryProps> = ({ sources = [] }) => {

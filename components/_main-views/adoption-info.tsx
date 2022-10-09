@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import ReactMarkdown from "react-markdown";
+import { renderMarkdown } from "utility-fns";
 
 interface IAdoptionInfoProps extends PropsWithChildren {
   content: string; // markdown
@@ -10,7 +10,7 @@ const AdoptionInfo: React.FC<IAdoptionInfoProps> = ({ content }) => (
     <header className="subpage-header">
       Adoption Info
     </header>
-    <ReactMarkdown>{ content }</ReactMarkdown>
+    {renderMarkdown(content)}
   </div>
 );
 

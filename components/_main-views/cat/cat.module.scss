@@ -1,0 +1,7 @@
+.cat {
+  :global {
+    .featured-image {
+      @apply max-w-md; 
+    }
+  }
+}

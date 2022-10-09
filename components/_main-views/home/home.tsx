@@ -1,8 +1,8 @@
 import Gallery from "@/components/gallery/gallery";
-import ReactMarkdown from "react-markdown";
 import { IHomeProps, KittenSummaryInfo } from "./home.types";
 import styles from './home.module.scss';
 import Link from "next/link";
+import { renderMarkdown } from "utility-fns";
 
 const Home: React.FC<IHomeProps> = ({
   title, 
@@ -18,20 +18,25 @@ const Home: React.FC<IHomeProps> = ({
     <main className="subpage-container">
       <section>
         <header className="subpage-header">About Claire</header>
-        <ReactMarkdown>{aboutTheCats}</ReactMarkdown>
+        {renderMarkdown(aboutTheCats)}
       </section>
       <section id="the-kittens">
         <header className="subpage-header">The Kittens</header>
         <div className="kittens-container">
           {
-            kittens.map((kittenInfo: KittenSummaryInfo) => (
-              <div className="kitten-summary">
+            kittens.map((kittenInfo: KittenSummaryInfo, index: number) => (
+              <div className="kitten-summary" key={index}>
                 <div>
                   <h2><Link href={`/cats/${kittenInfo.link.slug}`}>{kittenInfo.link.name}</Link></h2>
-                  <Link href={`/cats/${kittenInfo.link.slug}`}><a><img src={'/'+kittenInfo.picture} /></a></Link>
+                  <Link href={`/cats/${kittenInfo.link.slug}`}><a><img src={kittenInfo.picture} /></a></Link>
                 </div>
                 <div className="description">
-                  {kittenInfo.description}
+                  {kittenInfo.description} 
+                  <aside>
+                    <Link href={`/cats/${kittenInfo.link.slug}`}>
+                      <a>[ see more about {kittenInfo.link.name} ]</a>
+                    </Link>
+                  </aside>
                 </div>
               </div>
             ))

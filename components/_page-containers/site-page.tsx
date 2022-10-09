@@ -27,6 +27,7 @@ const SitePage: React.FC<SitePageProps> = ({
       <AppNav className="app-header" siteTitle={siteTitle}></AppNav>
       <div className="header-spacer">&nbsp;</div>
       <div className="main-view">{children}</div>
+      <a className="return-to-top-link" href="#home" title="return to top">⬆</a>
     </div>
   </>
 );

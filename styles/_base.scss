@@ -45,36 +45,76 @@ a {
 }
 
 .subpage-container {
-  @apply desktop:py-4 desktop:px-16 handset:p-4;
+  @apply desktop:py-4 desktop:px-16 handset:p-4 max-w-5xl mx-auto;
 
   h1, h2, h3 {
     @apply my-2;
   }
   p {
-    @apply p-2;
+    @apply py-2;
   }
   a {
     @apply handset:break-words;
   }
+
+  h1 {
+    @apply
+      mt-10;
+  }
+
+
 }
 
 header.subpage-header {
   @apply 
     font-scripty 
-    text-center 
     text-4xl 
     my-10
-    handset:my-6
-    ml-5
-    indent-6; // account for after content
+    pb-4
+    handset:my-6;
 
-    /*
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(90deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.3) 50%, rgba(0,0,0,0) 70%);
-    border-image-slice: 1;
-    */
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, rgba(0,0,0,.3) 0%, rgba(0,0,0,.3) 50%, rgba(0,0,0,0) 90%);
+  border-image-slice: 1;
 
   &:after {
-    content: ' 🐾 '
+    content: ' 🐾 ';
+    text-shadow: 1px 1px 2px #9999aa;
   }
+}
+
+a.return-to-top-link {
+  @apply 
+    absolute
+    bottom-4
+    right-6
+
+    w-10
+    h-10
+
+    flex
+    items-center
+    justify-center
+
+    text-base
+    text-white
+    bg-black
+    rounded-md
+    opacity-30
+
+    transition-opacity
+    duration-300
+    ease-in-out
+    ;
+
+  &:hover {
+    @apply
+      opacity-75;
+  }
+}
+
+//-- Fix for cursor jumping to the end of the line on the markdown editor 
+// https://github.com/netlify/netlify-cms/issues/5092#issuecomment-1256321540
+[data-slate-editor] { 
+  -webkit-user-modify: read-write !important; 
 }

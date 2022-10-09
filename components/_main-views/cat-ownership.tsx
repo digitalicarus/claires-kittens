@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import ReactMarkdown from "react-markdown";
+import { renderMarkdown } from "utility-fns";
 
 interface ICatOwnershipProps extends PropsWithChildren {
   content: string; // markdown
@@ -10,7 +10,7 @@ const CatOwnership: React.FC<ICatOwnershipProps> = ({ content }) => (
     <header className="subpage-header">
       Care Tips
     </header>
-    <ReactMarkdown>{content}</ReactMarkdown>
+    {renderMarkdown(content)}
   </div>
 );
 
