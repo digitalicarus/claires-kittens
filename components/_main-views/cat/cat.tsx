@@ -18,11 +18,14 @@ const Cat: React.FC<ICatProps> = ({ name, featuredPicture, about, gallerySources
         { featuredPicture ? <img className="featured-image" src={`${featuredPicture}?nf_resize=fit&w=600`} /> : null }
         {renderMarkdown(about)}
       </section>
-      <section>
-        <header className="subpage-header">Gallery</header>
-        <Gallery sources={gallerySources}></Gallery>
-      </section>
-
+      { 
+        gallerySources.length > 0 ? (
+          <section>
+            <header className="subpage-header">Gallery</header>
+            <Gallery sources={gallerySources}></Gallery>
+          </section>
+        ) : null
+      }
     </main>
   </div>
 );

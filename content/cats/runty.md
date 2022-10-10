@@ -1,8 +1,6 @@
 ---
 name: Runty
-featured_picture: /media/img_0918.jpg
-gallery:
-  - description: asdf
-    src: /media/screen-shot-2022-08-27-at-11.16.29-am.png
+featured_picture: /media/screen-shot-2022-09-05-at-6.07.13-pm.png
+gallery: []
 ---
-he's very runtyf
+He was the runt of the litter but now he's a long sleek boy with a very long tail. Runty is all black and his hair is long.
