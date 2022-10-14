@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { IGallerySource } from "@/root/shared-utilities-and-types";
 import { PropsWithChildren, ReactComponentElement, useState } from "react";
 import styles from './gallery.module.scss';
 
@@ -6,10 +6,6 @@ export interface IGalleryProps extends PropsWithChildren {
   sources: IGallerySource[]; // markdown
 }
 
-export interface IGallerySource {
-  description?: string;
-  src: string;
-}
 
 function getSourceContent (source: IGallerySource) {
   const isYoutube = /youtube/.test(source.src);

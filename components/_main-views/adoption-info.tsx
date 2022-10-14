@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { renderMarkdown } from "utility-fns";
+import { renderMarkdown } from "@/root/shared-utilities-and-types";
 
 interface IAdoptionInfoProps extends PropsWithChildren {
   content: string; // markdown

@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { createRef, PropsWithChildren } from "react";
-import { scrollToTop } from "utility-fns";
+import { scrollToTop } from "@/root/shared-utilities-and-types";
 import AppNav from "../app-header/app-header";
 import styles from './page-containers.module.scss';
 

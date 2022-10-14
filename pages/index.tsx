@@ -3,24 +3,27 @@ import { GetStaticProps } from "next";
 
 import Home from "@/components/_main-views/home/home";
 import SitePage from "@/components/_page-containers/site-page";
-import { IHomeProps, IKittenSummaryInfoParams, KittenSummaryInfo} from "@/components/_main-views/home/home.types";
+import { HomeCatSummary, IHomeCatFromMarkdown, IHomeCatSummary, IHomeCatSummaryParams, IHomeProps } from "@/components/_main-views/home/home.types";
 
-import { body, attributes } from '../content/home.md'
+import { attributes } from '../content/home.md'
 import { PropsWithChildren } from "react";
-import { IGallerySource } from "@/components/gallery/gallery";
+import { IGallerySource, parseWeirdJSONString } from "../shared-utilities-and-types";
 
 export interface IIndexProps extends PropsWithChildren {
   title: string;
   bannerImg: string;
-  aboutTheCats?: string; // markdown 
-  kittens?: IKittenSummaryInfoParams[],
+  about: string; // markdown 
+  catsUnparsed: string[],
   gallerySources: IGallerySource[]
 }
 
 const IndexPage: React.FC<IIndexProps> = ({
-  title, bannerImg, aboutTheCats, kittens = [], gallerySources
+  title, bannerImg, about, catsUnparsed = [], gallerySources
 }) => {
-  const kittensTransformed = kittens.map((kitten: IKittenSummaryInfoParams) => new KittenSummaryInfo(kitten));
+
+  const catSummaries = catsUnparsed 
+    .map((catUnparsed: string) => parseWeirdJSONString(catUnparsed))
+    .map((cat: IHomeCatSummaryParams) => new HomeCatSummary(cat));
   
   return (
     <>
@@ -31,8 +34,8 @@ const IndexPage: React.FC<IIndexProps> = ({
         <Home
           title={title}
           bannerImg={bannerImg}
-          aboutTheCats={aboutTheCats}
-          kittens={kittensTransformed}
+          about={about}
+          cats={catSummaries}
           gallerySources={gallerySources}
         ></Home>
       </SitePage>
@@ -42,15 +45,16 @@ const IndexPage: React.FC<IIndexProps> = ({
 
 export default IndexPage;
 
-export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
+export const getStaticProps: GetStaticProps<IIndexProps> = async () => {
   return { 
     props: { 
       title: attributes.title, 
       bannerImg: attributes.banner,
-      aboutTheCats: body,
+      about: attributes.about,
       //-- direct from markdown - getStaticProps members must be JSON serializable objects
+      //-- So we'll have to make this a proper object instance in the component to be safe
       // https://nextjs.org/docs/api-reference/data-fetching/get-static-props
-      kittens: attributes.kittens,
+      catsUnparsed: attributes.cats.map((catFromMarkdown: IHomeCatFromMarkdown) => catFromMarkdown.catSummary),
       gallerySources: attributes.gallery
     }
   }

@@ -1,20 +1,31 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import SitePage from "@/components/_page-containers/site-page";
-import Cat, { ICatProps } from '@/components/_main-views/cat/cat';
 import { ParsedUrlQuery } from "querystring";
 
-const CatPage: React.FC<ICatProps> = ({
-  name, featuredPicture, about, gallerySources
+import SitePage from "@/components/_page-containers/site-page";
+import Cat, { ICatProps } from '@/components/_main-views/cat/cat';
+import { CatRecord } from "@/main-views/cat/cat.types";
+import { catNameToUrl, getCatNames, IGallerySource } from "@/root/shared-utilities-and-types";
+
+export interface ICatPageProps {
+  name: string;
+  gender: string;
+  adopted: string;
+  about: string;
+  picture: string;
+  gallery: IGallerySource[];
+}
+
+const CatPage: React.FC<ICatPageProps> = ({
+  name, gender, adopted, about, picture, gallery
 }) => {
-  
+
+  const cat = new CatRecord({
+    name, gender, adopted, about, picture, gallery
+  });
+
   return (
     <SitePage>
-      <Cat
-        name={name}
-        featuredPicture={featuredPicture}
-        about={about}
-        gallerySources={gallerySources}
-      ></Cat>
+      <Cat cat={cat}></Cat>
     </SitePage>
   );
 };
@@ -23,19 +34,8 @@ export default CatPage;
 
 //-- WIP ignore this
 export const getStaticPaths: GetStaticPaths = async () => {
-  const blogSlugs = ((context) => {
-    const keys = context.keys();
-    const slugs = keys.map((key: string, index: any) => {
-      let slug = key
-        .replace(/^.*[\\\/]/, '') // remove directory
-        .slice(0, -3); // remove file extension
-
-      return slug;
-    });
-    return slugs;
-  })(require.context('@/content/cats', true, /\.md$/))
-
-  const paths = blogSlugs.map((slug) => `/cats/${slug}`)
+  const catNames = getCatNames();
+  const paths = catNames.map(catNameToUrl);
 
   return {
     paths,
@@ -46,16 +46,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 interface ICatUrlParams extends ParsedUrlQuery {
   cat: string
 }
-export const getStaticProps: GetStaticProps<ICatProps> = async ({ ...ctx }) => {
+export const getStaticProps: GetStaticProps<ICatPageProps> = async ({ ...ctx }) => {
   const { cat } = ctx.params as ICatUrlParams;
-  const { attributes, body }= await import(`@/content/cats/${cat}.md`);
+  const { attributes, body } = await import(`@/content/cats/${cat}.md`);
 
   return {
-    props: {
+    props: { 
       name: attributes.name,
-      featuredPicture: attributes['featured_picture'],
-      gallerySources: attributes.gallery || [],
-      about: body
+      gender: attributes.gender,
+      adopted: attributes.adopted,
+      about: attributes.about,
+      picture: attributes.picture,
+      gallery: attributes.gallery || []
     }
   };
 };

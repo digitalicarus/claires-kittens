@@ -1,28 +1,36 @@
-import { PropsWithChildren } from "react";
-import { renderMarkdown } from "utility-fns";
-import Gallery, { IGallerySource } from "../../gallery/gallery";
+import { CatGenders, renderMarkdown } from "@/root/shared-utilities-and-types";
+import { ICatRecord } from "./cat.types";
+import Gallery from "../../gallery/gallery";
+
 import styles from './cat.module.scss';
 
-export interface ICatProps extends PropsWithChildren { 
-  name: string;
-  featuredPicture: string;
-  about: string; //markdown
-  gallerySources: IGallerySource[];
-}
+export interface ICatProps {
+  cat: ICatRecord
+} 
 
-const Cat: React.FC<ICatProps> = ({ name, featuredPicture, about, gallerySources = [] }) => (
+const Cat: React.FC<ICatProps> = ({ cat }) => (
   <div className={styles.cat}>
     <main className="subpage-container">
       <section className="max-w-screen-sm" >
-        <header className="subpage-header">{name ? name : '[ cat name ]'}</header>
-        { featuredPicture ? <img className="featured-image" src={`${featuredPicture}?nf_resize=fit&w=600`} /> : null }
-        {renderMarkdown(about)}
+        <header className="subpage-header">
+          {cat.name ? cat.name : '[ cat name ]'} 
+        </header>
+        { cat.picture ? <img className="featured-image" src={`${cat.picture}?nf_resize=fit&w=600`} /> : null }
+        <p>
+          <strong>Gender</strong> : &nbsp; {cat.gender} <br/>
+          <strong>Adoption Status</strong> : &nbsp;
+          {
+            cat.adopted ? `${cat.name} has been adopted! 🎉` :
+            `${cat.name} still needs a forever home 🥺`
+          }
+        </p>
+        {renderMarkdown(cat.about)}
       </section>
       { 
-        gallerySources.length > 0 ? (
+        cat.gallery.length > 0 ? (
           <section>
             <header className="subpage-header">Gallery</header>
-            <Gallery sources={gallerySources}></Gallery>
+            <Gallery sources={cat.gallery}></Gallery>
           </section>
         ) : null
       }

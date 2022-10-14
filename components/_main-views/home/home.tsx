@@ -1,14 +1,14 @@
 import Gallery from "@/components/gallery/gallery";
-import { IHomeProps, KittenSummaryInfo } from "./home.types";
+import { IHomeProps, IHomeCatSummary} from "./home.types";
 import styles from './home.module.scss';
 import Link from "next/link";
-import { renderMarkdown } from "utility-fns";
+import { CatGenders, renderMarkdown } from "@/root/shared-utilities-and-types";
 
 const Home: React.FC<IHomeProps> = ({
   title, 
   bannerImg, 
-  aboutTheCats = '', 
-  kittens = [],
+  about = '', 
+  cats = [],
   gallerySources = []
 }) => (
   <div className={styles.home}>
@@ -18,25 +18,35 @@ const Home: React.FC<IHomeProps> = ({
     <main className="subpage-container">
       <section>
         <header className="subpage-header">About Claire</header>
-        {renderMarkdown(aboutTheCats)}
+        {renderMarkdown(about)}
       </section>
       <section id="the-kittens">
         <header className="subpage-header">The Kittens</header>
         <div className="kittens-container">
           {
-            kittens.map((kittenInfo: KittenSummaryInfo, index: number) => (
+            cats.map((cat: IHomeCatSummary, index: number) => (
               <div className="kitten-summary" key={index}>
                 <div>
-                  <h2><Link href={`/cats/${kittenInfo.link.slug}`}>{kittenInfo.link.name}</Link></h2>
-                  <Link href={`/cats/${kittenInfo.link.slug}`}><a><img src={kittenInfo.picture} /></a></Link>
+                  <h2>
+                    <Link href={cat.link}>{cat.name}</Link>
+                    {
+                      cat.gender === CatGenders.Male ? '  (M)' :
+                      cat.gender === CatGenders.Female ? '  (F)' :
+                      ''
+                    }
+                  </h2>
+                  <Link href={cat.link}><a><img src={cat.picture || ''} /></a></Link>
                 </div>
                 <div className="description">
-                  {kittenInfo.description} 
-                  <aside>
-                    <Link href={`/cats/${kittenInfo.link.slug}`}>
-                      <a>[ see more about {kittenInfo.link.name} ]</a>
-                    </Link>
-                  </aside>
+                  <p>
+                    <strong>Gender</strong> : &nbsp; {cat.gender} <br/>
+                    <strong>Adoption Status</strong> : &nbsp;
+                      {
+                        cat.adopted ? `${cat.name} has been adopted! 🎉` :
+                        `${cat.name} still needs a forever home 🥺`
+                      }
+                  </p>
+                  {cat.about} 
                 </div>
               </div>
             ))

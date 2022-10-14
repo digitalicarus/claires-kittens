@@ -2,7 +2,7 @@ backend:
   name: git-gateway
 #  name: test-repo
   branch: main # Branch to update (optional; defaults to master)
-local_backend: 
+local_backend:
   # when using a custom proxy server port
   url: http://localhost:8082/api/v1
   # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
@@ -19,26 +19,24 @@ collections:
       fields:
         - { label: "Site Title", name: "title", widget: "string", required: true }
         - { label: "Site Banner Image", name: "banner", widget: "image", required: true }
-        - { label: "About Mom and Kittens", name: "body", widget: "markdown" }
-        - label: "Kittens"
-          name: "kittens"
+        - { label: "About Mom and Kittens", name: "about", widget: "markdown" }
+        - label: "Kitten Summaries"
+          name: "cats"
           widget: list
           fields:
-            - { 
-                label: "Kitten Page Link", 
-                name: "link", 
-                widget: "relation",
-                collection: "cats",
-                value_field: "{ \"name\": \"{{name}}\", \"slug\": \"{{slug}}\" }",
-                display_fields: ["name"],
-                search_fields: ["name"]
-              }
-            - { label: "Featured Picture", name: "picture", widget: "image" }
-            - { label: "Short Description of Kitten", name: "description", widget: "string", required: true}
+            - {
+              label: "Kitten",
+              name: "catSummary",
+              widget: "relation",
+              collection: "cats",
+              value_field: "{ \"name\": \"`{{name}}`\",  \"slug\": \"{{slug}}\", \"gender\": \"{{gender}}\", \"adopted\": \"{{adopted}}\", \"picture\": \"{{picture}}\", \"about\": \"`{{about}}`\" }",
+              display_fields: ["{{name}} - {{gender}}"],
+              search_fields: ["name"]
+            }
         - label: "Gallery Item"
           name: "gallery"
           widget: list
-          fields: 
+          fields:
             - {
               label: "Description",
               name: "description",
@@ -67,12 +65,22 @@ collections:
     identifier_field: name
     fields:
       - { label: "Cat Name", name: "name", widget: "string" }
-      - { label: "Featured Picture", name: "featured_picture", widget: "image" }
-      - { label: "About This Cat", name: "body", widget: "markdown" }
+      - label: "Gender"
+        name: "gender"
+        widget: "select"
+        required: false
+        options: [ "Male", "Female" ]
+      - label: "Adopted"
+        name: "adopted"
+        widget: "select"
+        required: false
+        options: [ "Yes", "No" ]
+      - { label: "Featured Picture", name: "picture", widget: "image" }
+      - { label: "About This Cat", name: "about", widget: "markdown" }
       - label: "Gallery Item"
         name: "gallery"
         widget: list
-        fields: 
+        fields:
           - {
             label: "Description",
             name: "description",
