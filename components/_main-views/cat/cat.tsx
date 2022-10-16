@@ -15,7 +15,7 @@ const Cat: React.FC<ICatProps> = ({ cat }) => (
         <header className="subpage-header">
           {cat.name ? cat.name : '[ cat name ]'} 
         </header>
-        { cat.picture ? <img className="featured-image" src={`${cat.picture}?nf_resize=fit&w=600`} /> : null }
+        { cat.picture ? <img className="featured-image" src={`${cat.picture}`} /> : null }
         <p>
           <strong>Gender</strong> : &nbsp; {cat.gender} <br/>
           <strong>Adoption Status</strong> : &nbsp;

@@ -21,32 +21,49 @@ about: >-
   Ideally, we will find homes were they can be adopted in pairs or groups. Having litter mates as pets is incredibly rewarding. The bond they form is unlike any other. They take incredible care of each other.
 cats:
   - catSummary: '{ "name": "`Girl`",  "slug": "girl", "gender": "Male", "adopted":
-      "Yes", "picture": "/media/screen-shot-2022-09-05-at-6.07.13-pm.png",
+      "Yes", "picture": "/media/screen-shot-2022-10-15-at-11.00.15-pm.png",
       "about": "`Girl is actually a boy but has pink lips and is very gentle. We
       suspected if anyone in the litter was a girl it was Girl.`" }'
   - catSummary: '{ "name": "`Nip`",  "slug": "nip", "gender": "Male", "adopted":
-      "Yes", "picture": "/media/screen-shot-2022-09-05-at-6.07.13-pm.png",
-      "about": "`Nip is adventurous and wise. He has a subtle bit of white hair
-      between his eyes. He nipped the vet once but to be fair she put her finger
-      in his mouth.`" }'
+      "Yes", "picture": "/media/img_1708.jpg", "about": "`Nip is adventurous and
+      wise. He has a subtle bit of white hair between his eyes. He nipped the
+      vet once but to be fair she put her finger in his mouth.`" }'
   - catSummary: '{ "name": "`Gremlin`",  "slug": "gremlin", "gender": "Male",
-      "adopted": "No", "picture":
-      "/media/screen-shot-2022-09-05-at-6.07.13-pm.png", "about": "`Gremlin is a
-      little chonker with short legs and glorious tufts of hair coming out of
+      "adopted": "No", "picture": "/media/img_2008.jpeg", "about": "`Gremlin is
+      a little chonker with short legs and glorious tufts of hair coming out of
       his ears. He can be a cuddler. `" }'
   - catSummary: "{ \"name\": \"`Runty`\",  \"slug\": \"runty\", \"gender\":
-      \"Male\", \"adopted\": \"No\", \"picture\":
-      \"/media/screen-shot-2022-09-05-at-6.07.13-pm.png\", \"about\": \"`He was
-      the runt of the litter but now he's a long sleek boy with a very long
-      tail. Runty is all black and his hair is long. He's very intelligent and
-      quiet. He loves puzzle toys.`\" }"
+      \"Male\", \"adopted\": \"No\", \"picture\": \"/media/img_1992.jpeg\",
+      \"about\": \"`He was the runt of the litter but now he's a long sleek boy
+      with a very long tail. Runty is all black and his hair is long. He's very
+      intelligent and quiet. He loves puzzle toys.`\" }"
   - catSummary: "{ \"name\": \"`Tux`\",  \"slug\": \"tux\", \"gender\": \"Male\",
       \"adopted\": \"No\", \"picture\":
-      \"/media/screen-shot-2022-09-05-at-6.07.13-pm.png\", \"about\": \"`Tux is
+      \"/media/screen-shot-2022-10-15-at-11.07.32-pm.png\", \"about\": \"`Tux is
       long and slender. His chest is white but he has a \"black jacket that's
       too small\" and buttons at one point in the middle of his chest. Tux is
       super smart and runs like a gazelle.`\" }"
-gallery: []
+gallery:
+  - src: /media/img_2041.jpeg
+    description: Claire, Gremlin, Runty
+  - src: /media/img_1570.jpeg
+    description: At the vet
+  - src: /media/img_1564.jpeg
+    description: Playing with the grown-up boys
+  - src: https://www.youtube.com/watch?v=R1VrDzoHEIg
+  - src: /media/img_1464-copy.jpg
+    description: Chillin in the chair
+  - src: /media/img_1442.jpeg
+  - src: /media/img_1220.jpeg
+  - src: https://www.youtube.com/watch?v=GvEimpwx8Fw
+  - src: https://www.youtube.com/watch?v=Etojnm8DJoU
+  - src: /media/img_1209.jpg
+  - src: /media/img_1201-2.jpeg
+  - src: /media/img_1162.jpeg
+  - src: /media/img_0925-2.jpg
+  - src: /media/img_0132.jpeg
+  - src: /media/img_0666.jpeg
+  - src: /media/img_0855.jpeg
 ---
 Claire is a kitten herself at near or under 1 year old! 
 

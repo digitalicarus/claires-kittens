@@ -124,7 +124,7 @@ https://www.chewy.com/yeowww-catnip-yellow-banana-cat-toy/dp/130257
 ## Grooming
 
 **Magic Coat Grooming Mitt**  
-Works well, traps hair in a mat on the glove
+Works well, traps hair in a mat on the glove  
 https://www.amazon.com/gp/product/B002USK6X6/
 
 **Claw Trimmers**  
