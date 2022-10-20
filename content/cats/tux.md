@@ -10,8 +10,15 @@ gallery:
   - src: /media/img_2105.jpeg
   - src: /media/img_1988.jpeg
   - src: /media/img_1660.jpeg
-  - src: /media/img_1613.jpeg
+  - src: /media/img_4206.jpeg
   - src: /media/img_1335.jpeg
+  - src: /media/img_2743.jpeg
+  - src: /media/img_1336.jpeg
+  - src: /media/img_2578-2.jpeg
+  - src: /media/img_3590.jpg
+  - src: /media/img_4195.jpeg
+  - src: /media/img_4198.jpeg
+  - src: /media/img_1613.jpeg
   - src: /media/img_1003.jpeg
   - src: /media/img_0662.jpeg
 ---

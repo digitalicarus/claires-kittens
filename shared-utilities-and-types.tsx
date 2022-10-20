@@ -72,6 +72,8 @@ export const parseWeirdJSONString = (weirdJSON: string): any =>
       .replace(/(`[^\`]*\`)/g, (match: string) => match
         // escape the double quotes
         .replace(/"/g, '\\"')
+        // replace newlines so JSON parse works
+        .replace(/\n/g, '\\n')
         // remove the backtick indicators
         .replace(/`/g, '') 
       )
