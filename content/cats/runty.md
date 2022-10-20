@@ -2,12 +2,13 @@
 name: Runty
 gender: Male
 adopted: No
-picture: /media/img_4085.jpeg
+picture: /media/img_1992.jpeg
 about: He was the runt of the litter but now he's a long sleek boy with a very
   long tail. Runty is all black and his hair is long. He's very intelligent and
   quiet. He loves puzzle toys.
 gallery:
-  - src: /media/img_1992.jpeg
+  - src: /media/img_4085.jpeg
+  - src: /media/img_2203.jpg
   - src: /media/img_1978.jpeg
   - src: /media/img_1980.jpeg
   - src: /media/img_3619-copy2.jpg
