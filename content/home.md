@@ -29,7 +29,7 @@ cats:
       is a little chonker with short legs and glorious tufts of hair coming out
       of his ears. He can be a cuddler. `" }'
   - catSummary: "{ \"name\": \"`Runty`\",  \"slug\": \"runty\", \"gender\":
-      \"Male\", \"adopted\": \"No\", \"picture\": \"/media/img_4085.jpeg\",
+      \"Male\", \"adopted\": \"No\", \"picture\": \"/media/img_1992.jpeg\",
       \"about\": \"`He was the runt of the litter but now he's a long sleek boy
       with a very long tail. Runty is all black and his hair is long. He's very
       intelligent and quiet. He loves puzzle toys.`\" }"
