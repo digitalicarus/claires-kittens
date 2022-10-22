@@ -14,7 +14,7 @@ const AdoptionInfo: React.FC<IAdoptionInfoProps> = ({ content }) => (
       method="POST"
       data-netlify="true"
       netlify-honeypot="favorite-cat-name"
-      data-netlify-recapcha="true"
+      data-netlify-recaptcha="true"
     >
       <p>
         <label>
