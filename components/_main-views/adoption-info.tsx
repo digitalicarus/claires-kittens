@@ -16,6 +16,7 @@ const AdoptionInfo: React.FC<IAdoptionInfoProps> = ({ content }) => (
       netlify-honeypot="favorite-cat-name"
       data-netlify-recaptcha="true"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
           Your Name: <input type="text" name="name" />
