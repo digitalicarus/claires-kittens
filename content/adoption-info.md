@@ -1,1 +1,1 @@
-Coming soon!
+Please let me know your interest in Claire's boys and I'll get back to you as soon as I can!
