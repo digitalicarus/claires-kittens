@@ -2,7 +2,7 @@
 title: Claire's Kittens
 heading: Claire's Kittens
 banner: /media/screen-shot-2022-09-04-at-11.47.16-pm.png
-about: >-
+about: >
   Claire is a kitten herself at near or under 1 year old!
 
 
@@ -15,7 +15,7 @@ about: >-
   All the kittens were born without a hitch and Claire's motherly instincts sprung into action. She's been a model mom. She even learned to open doors to encourage them to explore 😅
 
 
-  All the kittens are super well adjusted and very socialized. They are happy, healthy, playful, and intelligent. Also, all the kittens are boys. The kittens were born on June 27th, 2022.
+  All the kittens are super well adjusted and very socialized. They are happy, healthy, playful, and intelligent. Also, all the kittens are boys. They were born on June 27th, 2022 and live near the Cedar Park, TX area.
 
 
   Ideally, we will find homes where they can be adopted in pairs or groups. Having litter mates as pets is incredibly rewarding. The bond they form is unlike any other. They take incredible care of each other.
