@@ -134,7 +134,7 @@ const AdoptionInfo: React.FC<IAdoptionInfoProps> = ({ content }) => {
               <a href={getYahooWebmailHref(contactEmailComponents)} onClick={() => { return true; }} target="_blank">Yahoo</a>
             </li>
             <li>
-              <a href={getMsWebmailHref(contactEmailComponents)} onClick={() => { return true; }} target="_blank">Hotmail, Outlook 265, Live Mail</a>
+              <a href={getMsWebmailHref(contactEmailComponents)} onClick={() => { return true; }} target="_blank">Hotmail, Outlook Web 365, Live Mail</a>
             </li>
             <li>
               <a href={getAolWebmailHref(contactEmailComponents)} onClick={() => { return true; }} target="_blank">AOL Mail</a>
