@@ -119,7 +119,7 @@ const AdoptionInfo: React.FC<IAdoptionInfoProps> = ({ content }) => {
       <section className="oldschool">
         <h1>Your Email Client</h1>
         <p className="copy-email">
-          Click this link to use your local Email: <a href={getNativeEmailHref(contactEmailComponents)}>{emailAddress}</a>
+          Click this link to use your computer's Email: <a href={getNativeEmailHref(contactEmailComponents)}>{emailAddress}</a>
           <p>
             or <button onClick={copyEmail}>Copy Email Address</button> <span className="success">{ copyEmailSuccess }</span>
           </p>
