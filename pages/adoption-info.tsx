@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import { body } from '../content/adoption-info.md'
 import SitePage from "@/components/_page-containers/site-page";
-import AdoptionInfo from "@/components/_main-views/adoption-info";
+import AdoptionInfo from "@/root/components/_main-views/adoption-info/adoption-info";
 
 interface IAdoptionInfoPageProps {
   content: string; // markdown

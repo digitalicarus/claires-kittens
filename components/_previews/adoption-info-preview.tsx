@@ -1,6 +1,6 @@
 import React from "react";
 import { PreviewTemplateComponentProps } from 'netlify-cms-core';
-import AdoptionInfo from "@/components/_main-views/adoption-info";
+import AdoptionInfo from "@/root/components/_main-views/adoption-info/adoption-info";
 import PreviewPage from "../_page-containers/preview-page";
 
 interface AdoptionInfoPreviewProps extends PreviewTemplateComponentProps {}

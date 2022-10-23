@@ -1,0 +1,53 @@
+.adoption-info {
+  :global {
+
+    .copy-email {
+      input {
+        visibility: hidden;
+        width: 0;
+      }
+    }
+    button {
+      @apply
+        py-2
+        px-4
+        bg-green-700
+        text-white
+        ;
+
+      &[type="submit"] {
+        @apply w-32;
+      }
+    }
+
+    form {
+      @apply
+        w-96
+        max-w-full;
+
+      label {
+        @apply  
+        font-bold;
+      }
+
+      input, textarea {
+        @apply
+          block
+          resize-none
+          w-full
+          p-2
+          font-normal
+          ;
+      }
+
+      p {
+        @apply my-1;
+
+        .recaptcha {
+          @apply mt-4;
+        }
+      }
+
+    }
+  }
+}
