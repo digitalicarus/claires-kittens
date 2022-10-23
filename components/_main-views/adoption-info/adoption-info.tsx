@@ -85,7 +85,7 @@ const AdoptionInfo: React.FC<IAdoptionInfoProps> = ({ content }) => {
         success();
       }
 
-      fakeSubmit(); return;
+      //fakeSubmit(); return;
 
       fetch("/", {
         method: "POST",
