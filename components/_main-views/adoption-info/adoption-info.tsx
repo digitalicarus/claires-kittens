@@ -115,7 +115,6 @@ const AdoptionInfo: React.FC<IAdoptionInfoProps> = ({ content }) => {
     <div className={`${styles['adoption-info']} subpage-container`}>
       <header className="subpage-header">Adoption Info</header>
       {renderMarkdown(content)}
-      Choose one of the ways to contact us below. 
       <section className="oldschool">
         <h1>Your Email Client</h1>
         <p className="copy-email">
