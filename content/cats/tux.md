@@ -2,11 +2,15 @@
 name: Tux
 gender: Male
 adopted: No
-picture: /media/screen-shot-2022-10-15-at-11.07.32-pm.png
+picture: /media/tux.jpeg
 about: Tux is long and slender. His chest is white but he has a "black jacket
   that's too small" and buttons at one point in the middle of his chest. Tux is
   super smart and runs like a gazelle.
 gallery:
+  - src: /media/tux.jpeg
+  - src: /media/tux2.jpeg
+  - src: /media/runty-and-tux.jpeg
+  - src: /media/screenshot-2023-01-01-at-11.40.25-am.png
   - src: /media/img_2105.jpeg
   - src: /media/img_1988.jpeg
   - src: /media/img_1660.jpeg
