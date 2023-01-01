@@ -20,25 +20,25 @@ about: >
 
   Ideally, we will find homes where they can be adopted in pairs or groups. Having litter mates as pets is incredibly rewarding. The bond they form is unlike any other. They take incredible care of each other.
 cats:
+  - catSummary: '{ "name": "`Gremlin`",  "slug": "gremlin", "gender": "Male",
+      "adopted": "No", "picture": "/media/gremlin.jpeg", "about": "`Gremlin is a
+      little chonker with short legs and glorious tufts of hair coming out of
+      his ears. He can be a cuddler. `" }'
+  - catSummary: "{ \"name\": \"`Runty`\",  \"slug\": \"runty\", \"gender\":
+      \"Male\", \"adopted\": \"No\", \"picture\": \"/media/runty.jpeg\",
+      \"about\": \"`He was the runt of the litter but now he's a long sleek boy
+      with a very long tail. Runty is all black and his hair is long. He's very
+      intelligent and quiet. He loves puzzle toys and gently mewing for pets.`\"
+      }"
+  - catSummary: "{ \"name\": \"`Tux`\",  \"slug\": \"tux\", \"gender\": \"Male\",
+      \"adopted\": \"No\", \"picture\": \"/media/tux.jpeg\", \"about\": \"`Tux
+      is long and slender. His chest is white but he has a \"black jacket that's
+      too small\" and buttons at one point in the middle of his chest. Tux is
+      super smart and runs like a gazelle.`\" }"
   - catSummary: "{ \"name\": \"`Claire (mom)`\",  \"slug\": \"claire-mom\",
       \"gender\": \"Female\", \"adopted\": \"Yes\", \"picture\":
       \"/media/img_9184.jpeg\", \"about\": \"`Claire is a kitten herself but a
       fantastic cat mom. She's super sweet, talkative, and playful. `\" }"
-  - catSummary: '{ "name": "`Gremlin`",  "slug": "gremlin", "gender": "Male",
-      "adopted": "No", "picture": "/media/img_1482-2.jpeg", "about": "`Gremlin
-      is a little chonker with short legs and glorious tufts of hair coming out
-      of his ears. He can be a cuddler. `" }'
-  - catSummary: "{ \"name\": \"`Runty`\",  \"slug\": \"runty\", \"gender\":
-      \"Male\", \"adopted\": \"No\", \"picture\": \"/media/img_1992.jpeg\",
-      \"about\": \"`He was the runt of the litter but now he's a long sleek boy
-      with a very long tail. Runty is all black and his hair is long. He's very
-      intelligent and quiet. He loves puzzle toys.`\" }"
-  - catSummary: "{ \"name\": \"`Tux`\",  \"slug\": \"tux\", \"gender\": \"Male\",
-      \"adopted\": \"No\", \"picture\":
-      \"/media/screen-shot-2022-10-15-at-11.07.32-pm.png\", \"about\": \"`Tux is
-      long and slender. His chest is white but he has a \"black jacket that's
-      too small\" and buttons at one point in the middle of his chest. Tux is
-      super smart and runs like a gazelle.`\" }"
   - catSummary: >-
       { "name": "`Star`",  "slug": "star", "gender": "Male", "adopted": "Yes",
       "picture": "/media/screen-shot-2022-10-15-at-11.00.15-pm.png", "about":
