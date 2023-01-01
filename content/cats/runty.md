@@ -5,11 +5,12 @@ adopted: No
 picture: /media/runty.jpeg
 about: He was the runt of the litter but now he's a long sleek boy with a very
   long tail. Runty is all black and his hair is long. He's very intelligent and
-  quiet. He loves puzzle toys.
+  quiet. He loves puzzle toys and gently mewing for pets.
 gallery:
   - src: /media/runty.jpeg
   - src: /media/runty2.jpeg
   - src: /media/runty-4.jpeg
+  - src: /media/screenshot-2023-01-01-at-11.40.25-am.png
   - src: /media/runty4.jpeg
   - src: /media/runty-and-tux.jpeg
   - src: /media/img_4085.jpeg
