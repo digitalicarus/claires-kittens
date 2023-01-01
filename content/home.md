@@ -60,6 +60,8 @@ cats:
 
       Originally named Nip. Nip is adventurous and wise. He has a subtle bit of white hair between his eyes. He nipped the vet once but to be fair she put her finger in his mouth.`" }
 gallery:
+  - src: /media/everybody.jpeg
+    description: Sleeping in a tree
   - src: /media/img_2041.jpeg
     description: Claire, Gremlin, Runty
   - src: /media/img_1570.jpeg
